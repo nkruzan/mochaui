@@ -1,0 +1,477 @@
+/*
+ ---
+
+ file: window.css
+
+ description: MUI - Create a window from a form.
+
+ copyright: (c) 2011 Contributors in (/AUTHORS.txt).
+
+ license: MIT-style license in (/MIT-LICENSE.txt).
+
+ provides: css for default theme
+
+ ...
+ */
+
+/* Windows
+---------------------------------------------------------------- */
+
+.mui-window {
+	display: none;
+	overflow: hidden;
+	background-color: #e5e5e5;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.mui-window.css3 {
+	overflow: visible;
+}
+
+.mui-window.isFocused {
+}
+
+.mui-windowOverlay {
+	position: absolute; /* This is also set in theme.js in order to make theme transitions smoother */
+	top: 0;
+	left: 0;
+}
+
+/*
+
+	We get a little creative here in order to define a gradient in the CSS using a query
+	string appended to a background image.
+	
+	"from" is the top color of the gradient. "to" is the bottom color of the gradient.
+	
+	Both must be hex values without the leading # sign.
+  
+*/
+.mui-windowTitlebar {
+	width: 100%;
+	overflow: hidden;
+	background: url(../images/spacer.gif?from=fafafa&to=e5e5e5);
+}
+
+.mui-windowTitlebar .mui-toolbar {
+	padding-top: 2px;
+	padding-bottom: 1px;
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 23px;
+	line-height: 23px;
+	float: right;
+	vertical-align: middle;
+}
+
+.mui-windowTitle {
+	float: left;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 23px;
+	vertical-align: middle;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 10px 0 12px;
+	color: #888;
+}
+
+.mui-windowTitle {
+	color: #181818;
+}
+
+.mui-windowTitlebar span.mui-icon.windowMinimize {
+	background: url('../images/window-minimize.gif') left top no-repeat;
+	height: 16px;
+	padding: 0 14px 0 0;
+}
+
+.mui-windowTitlebar span.mui-icon.windowMinimize:hover {
+	border-color: transparent;
+}
+
+.mui-windowTitlebar span.mui-icon.windowMaximize {
+	background: url('../images/window-maximize.gif') left top no-repeat;
+	height: 16px;
+	padding: 0 14px 0 0;
+}
+
+.mui-windowTitlebar span.mui-icon.windowMaximize:hover {
+	border-color: transparent;
+}
+
+.mui-windowTitlebar span.mui-icon.windowClose {
+	background: url('../images/window-close.gif') left top no-repeat;
+	height: 16px;
+	padding: 0 14px 0 0;
+}
+
+.mui-windowTitlebar.gauge .mui-windowTitle {
+	color: white;
+	margin-top: 1px;
+}
+
+.mui-windowTitlebar.gauge span.mui-icon.windowClose {
+	background: url('../images/window-close.gif') left -16px no-repeat;
+	padding-top: 1px;
+}
+
+.mui-windowTitlebar.gauge span.mui-icon.windowMinimize {
+	background: url('../images/window-minimize.gif') left -16px no-repeat;
+	padding-top: 1px;
+}
+
+.mui-windowTitlebar span.mui-icon.windowClose:hover {
+	border-color: transparent;
+}
+
+.mui-windowTitlebar .mui-toolbar span.mui-icon {
+	line-height: 20px;
+	padding-top: 0;
+	padding-bottom: 0;;
+	cursor: pointer
+}
+
+.mui-windowToolbarWrapper {
+	width: 100%; /* For IE */
+	position: relative;
+	height: 29px;
+	background: #f1f1f1;
+	overflow: hidden;
+	border-top: 1px solid #d9d9d9;
+}
+
+div.mui-windowToolbarWrapper.bottom {
+	border: 0;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.mui-windowToolbar {
+	width: 100%; /* For IE */
+	border-top: 1px solid #fff;
+}
+
+.mui-windowContentBorder {
+	border-top: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+}
+
+.mui-windowContentWrapper {
+/* Has a fixed height and scrollbars if required. */
+	font-size: 12px;
+	overflow: auto;
+	background: #fff;
+}
+
+.mui-window .pad {
+	padding: 10px 12px;
+}
+
+.mui-windowFooter {
+	height: 26px;
+	padding-left: 20px;
+	padding-top: 1px;
+}
+
+.mui-windowFooter .mui-toolbar {
+	vertical-align: middle;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	padding-top: 2px;
+	float: left;
+	padding-left: 20px;
+}
+
+.IE .mui-windowFooter .mui-toolbar {
+	padding-top: 4px
+}
+
+.mui-windowFooter .mui-toolbar span.mui-icon {
+	line-height: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	cursor: pointer
+}
+
+.mui-window .mui-handle {
+	position: absolute;
+	z-index: 2;
+}
+
+.mui-window .mui-handle, .mui-window .mui-handleN, .mui-window .mui-handleS, .mui-window .mui-handleW, .mui-window .mui-handleE {
+	background: #0f0;
+	width: 3px;
+	height: 3px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 0); /* IE6 and 7*/
+	opacity: .0;
+	-moz-opacity: .0;
+	overflow: hidden;
+	font-size: 1px; /* For IE6 */
+}
+
+.mui-window .mui-cornerSE, .mui-window .mui-cornerNE, .mui-window .mui-cornerNW, .mui-window .mui-cornerSW, .mui-window .mui-corner {
+/* Corner resize handles */
+	width: 10px;
+	height: 10px;
+	background: #f00;
+}
+
+.mui-window .mui-cornerNE {
+	cursor: ne-resize;
+	top: 0;
+	right: 0;
+}
+
+.mui-window .mui-cornerNW {
+	cursor: nw-resize;
+	top: 0;
+	left: 0;
+}
+
+.mui-window .mui-cornerSW {
+	cursor: sw-resize;
+	bottom: 0;
+	left: 0;
+}
+
+.mui-window .mui-cornerSE {
+	cursor: se-resize;
+	width: 20px;
+	height: 20px;
+	opacity: 1.0;
+	filter: none;
+	-ms-filter: none;
+	background: url('../images/window-resize.gif') no-repeat; /* background: #fefefe; This is the color of the visible resize handle */
+}
+
+.mui-window.css3 .mui-cornerSE {
+	background: transparent;
+	border-color: transparent white white transparent;
+	border-style: solid;
+	border-width: 5px;
+	height: 0;
+	margin: 2px;
+	opacity: 1;
+	width: 0;
+}
+
+.mui-windowCanvasHeader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent;
+	z-index: -1;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.mui-windowControls {
+	position: absolute;
+	width: 58px;
+	top: 6px;
+	right: 10px;
+	height: 14px;
+	z-index: 4;
+	background: transparent;
+}
+
+.mui-windowCanvasControls {
+	position: absolute;
+	top: 6px;
+	right: 8px;
+	z-index: 3;
+	background: transparent;
+}
+
+/*
+	To use images for these buttons:
+	1. Set the useCanvasControls window option to false.
+	2. If you use a different button size you may need to reposition the controls.
+	   Modify the controlsOffset window option.		
+	2. Replace the background-color with a background-image for each button.
+
+*/
+.mui-windowMinimizeButton, .mui-windowMaximizeButton, .mui-windowCloseButton {
+	float: right;
+	width: 14px;
+	height: 14px;
+	font-size: 1px;
+	cursor: pointer;
+	z-index: 4;
+	color: #666;
+	background-color: #fff;
+	margin-left: 5px;
+}
+
+.mui-windowMinimizeButton {
+	margin-left: 0;
+}
+
+.mui-windowMaximizeButton {
+}
+
+.mui-windowCloseButton {
+}
+
+.mui-windowFooter .mui-spinner {
+	display: none;
+	position: absolute;
+	bottom: 5px;
+	left: 6px;
+	width: 16px;
+	height: 16px
+}
+
+.mui-IFrame {
+	width: 100%;
+}
+
+/* Fix for IE6 select z-index issue */
+.zIndexFix {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	filter: mask();
+	width: 100px;
+	height: 100px;
+	border: 1px solid transparent;
+}
+
+/* Viewport overlays
+---------------------------------------------------------------- */
+#mui-modalOverlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 0); /* IE6 and 7*/
+	opacity: 0;
+	-moz-opacity: 0;
+	z-index: 10000;
+}
+
+/* Fix for IE6 select z-index issue */
+#mui-modalFix {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 0); /* IE6 and 7*/
+	opacity: 0;
+	-moz-opacity: 0;
+	z-index: 9999;
+}
+
+/* Underlay */
+#mui-windowUnderlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+}
+
+* html #mui-windowUnderlay {
+	position: absolute;
+}
+
+/* The replaced class is used internally when converting CSS values to Canvas. These classes should not be removed. */
+.mui-window.replaced, .mui-windowTitlebar.replaced, .mui-windowMinimizeButton.replaced, .mui-windowMaximizeButton.replaced, .mui-windowCloseButton.replaced {
+	background-color: transparent !important;
+}
+
+.mui-windowClosed {
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	top: -20000px;
+	left: -20000px;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.mui-windowClosed .mui-windowContentBorder, .mui-windowClosed .mui-windowToolbarWrapper, .mui-windowClosed .mui-windowTitlebar, .mui-windowClosed .mui-windowControls, .mui-windowClosed .mui-windowCanvasControls {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	display: none;
+	z-index: -1;
+}
+
+/* Modals */
+.mui-modal2 {
+	border: 8px solid #fff;
+}
+
+.mui-modal2 .mui-windowContentBorder {
+	border-width: 0;
+}
+
+/* Window Themes */
+.mui-window.no-canvas {
+	background: #e5e5e5;
+	border: 1px solid #555;
+}
+
+.mui-window.css3.no-canvas {
+	border: none;
+}
+
+.mui-windowCss3Shadow {
+	background-color: #333;
+}
+
+.mui-window.no-canvas .mui-windowTitlebar {
+	background: #e5e5e5;
+}
+
+.mui-window.css3 .mui-windowTitlebar {
+	background-image: -moz-linear-gradient(top, #fafafa, #e5e5e5); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(1, #e5e5e5)); /* Saf4+ */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e5e5e5')"; /* IE8, IE9? */
+}
+
+.mui-window.transparent .mui-windowTitlebar h3 {
+	color: #fff;
+	display: none;
+}
+
+.mui-window.transparent .mui-windowContentWrapper {
+	background: transparent;
+}
+
+.mui-window.notification {
+	background: #cedff2;
+}
+
+.mui-window.notification .mui-windowTitlebar {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 0); /* IE6 and 7*/
+	opacity: .0;
+	-moz-opacity: 0;
+}
+
+.mui-window.notification .mui-windowContentBorder {
+	border-width: 0;
+}
+
+.mui-window.notification .mui-windowContentWrapper {
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	background: transparent;
+}
+
+.IE .mui-windowTitlebar .mui-toolbar {
+	margin-top: 0
+}

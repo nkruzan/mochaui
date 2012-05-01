@@ -1,0 +1,47 @@
+/*
+ ---
+
+ file: checkboxgrid.css
+
+ description: MUI - CheckBoxGrid CSS.
+
+ copyright: (c) 2011 Contributors in (/AUTHORS.txt).
+
+ license: MIT-style license in (/MIT-LICENSE.txt).
+
+ provides: css for default theme
+
+ ...
+ */
+
+/* CheckboxGrid */
+fieldset.mui-cbg {
+	display: block;
+	padding: 0 0 0 10px;
+	border: none;
+}
+
+fieldset.mui-cbg span {
+	white-space: nowrap;
+	float: left
+}
+
+fieldset.mui-cbg label {
+	padding-left: 2px;
+	padding-right: 3px;
+	font-size: 12px;
+}
+
+fieldset.mui-cbg input {
+	padding-right: 3px;
+}
+
+.mui-cbg-wrapper {
+	overflow:auto;
+}
+
+.mui-cbg td {
+	white-space:nowrap;
+}
+
+/* CheckboxGrid */

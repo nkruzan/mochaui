@@ -1,0 +1,134 @@
+/*
+ ---
+
+ file: imagebutton.css
+
+ description: MUI - Image Button control css.
+
+ copyright: (c) 2011 Contributors in (/AUTHORS.txt).
+
+ license: MIT-style license in (/MIT-LICENSE.txt).
+
+ provides: css for default theme
+
+ ...
+ */
+
+/* Image Buttons */
+span.mui-imgButton {
+	margin-right: 2px;
+	line-height: 16px;
+	padding-top: 1px;
+}
+
+span.mui-imgButton .mui-imgButton {
+	display: inline-block;
+	background-color: white;
+	border: solid 1px #DDDDDD;
+	cursor: pointer;
+	padding: 0 2px 0 4px;
+	margin: 0;
+	vertical-align: middle;
+	font-family: Sans-Serif;
+	font-size: 11px;
+}
+
+span.mui-imgButton .mui-imgButton span span {
+	background-color: transparent;
+	border: none;
+	color: #AAAAAA;
+	position: relative;
+	top: -6px;
+	padding: 0 2px 0 2px;
+}
+
+span.mui-imgButton .mui-imgButton:hover {
+	border: solid 1px #790000;
+	text-decoration: none;
+	color: #790000;
+}
+
+span.mui-imgButton .mui-imgButton:hover span {
+	text-decoration: none;
+	color: #790000;
+}
+
+span.mui-imgButton .mui-imgButton:visited, .mui-imgButton:active, .mui-imgButton:link, .mui-imgButton:hover {
+	text-decoration: none;
+}
+
+span.mui-imgButton .mui-imgButton:visited span, span.mui-imgButton .mui-imgButton:active span, span.mui-imgButton .mui-imgButton:link span, span.mui-imgButton .mui-imgButton:hover span {
+	text-decoration: none;
+}
+
+span.mui-imgButton .mui-imgButton:link span span, span.mui-imgButton .mui-imgButton:active span span, span.mui-imgButton .mui-imgButton:hover span span, span.mui-imgButton .mui-imgButton:visited span span {
+	border: none;
+	text-decoration: none;
+}
+
+span.mui-imgButton .mui-imgButton span img {
+	padding: 0 0 4px 0;
+	position: relative;
+	top: 7px
+}
+
+span.mui-imgButton .mui-imgButton span {
+	padding: 0 4px 0 2px;
+	color: #AAAAAA;
+	position: relative;
+	top: -3px;
+}
+
+span.mui-imgButton .mui-imgButton.imgOnly {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}
+
+span.mui-imgButton .mui-imgButton.imgOnly span {
+	padding: 0 0 0 2px;
+}
+
+span.mui-imgButton .mui-imgButton.imgOnly:hover {
+	background-color: transparent;
+	border: none;
+}
+
+.mui-toolbar div span.mui-imgButton,
+div.mui-toolbar div span.mui-imgButton {
+	line-height: 12px;
+}
+
+.mui-toolbar div span.mui-imgButton .mui-imgButton,
+div.mui-toolbar div span.mui-imgButton .mui-imgButton {
+	background-color: transparent;
+	margin-right: 2px;
+}
+
+.mui-toolbar span.mui-imgButton .mui-imgButton span img,
+div.mui-toolbar div span.mui-imgButton .mui-imgButton span img {
+	padding: 0 0 2px 0;
+	position: relative;
+	top: 6px
+}
+
+div.mui-windowFooter span.mui-imgButton {
+	line-height: 14px;
+}
+
+div.mui-windowFooter span.mui-imgButton .mui-imgButton {
+	background-color: transparent;
+	border: solid 1px #BBBBBB;
+}
+
+div.mui-windowFooter span.mui-imgButton .mui-imgButton span img {
+	padding: 0 0 3px 0;
+	position: relative;
+	top: 6px
+}
+
+div.mui-windowFooter span.mui-imgButton .mui-imgButton span span {
+	color: #BBBBBB;
+}
+
+/* Image Buttons */

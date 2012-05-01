@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<title>MochaUI - A Web Applications User Interface Library</title>
+	<meta name="description"
+		  content="A web applications user interface library built on the Mootools javascript framework"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<link rel="stylesheet" type="text/css" href="../Source/Themes/default/css/core.css"/>
+
+	<!--[if IE]>
+	<script type="text/javascript" src="scripts/excanvas.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="scripts/mootools-1.3.2-core-nocompat-yc.js"></script>
+	<script type="text/javascript" src="scripts/mootools-1.3.2-more-yc.js"></script>
+
+	<!--MOCHAUI-->
+	<script type="text/javascript" src="../Source/Core/core.js"></script>
+	<script type="text/javascript" src="../Source/Core/create.js"></script>
+	<script type="text/javascript" src="../Source/Core/require.js"></script>
+	<script type="text/javascript" src="../Source/Core/canvas.js"></script>
+	<script type="text/javascript" src="../Source/Core/content.js"></script>
+	<script type="text/javascript" src="../Source/Core/persist.js"></script>
+	<script type="text/javascript" src="../Source/Core/themes.js"></script>
+	<!--MOCHAUI-->
+
+	<script type="text/javascript">
+
+		var Demo = {};
+
+		Demo.aboutWindow = function(){
+			MUI.create({
+				control:"MUI.Modal",
+				id: 'about',
+				title: 'MochaUI',
+				type: 'modal2',
+				width: 350,
+				height: 195,
+				contentBgColor: '#e5e5e5 url(images/logo2.gif) left 3px no-repeat',
+				padding: { top: 43, right: 12, bottom: 10, left: 12 },
+				scrollbars:  false,
+				content: {
+					loadMethod: 'xhr',
+					url: 'pages/about.html'
+				}
+			});
+		};
+
+		window.addEvent('domready', function(){
+			MUI.load(["MUI.Desktop","MUI.Window"], function(){
+				MUI.create([
+					{
+						'control':'MUI.Desktop',
+						'id':'desktop',
+						'content':[
+							{name:'taskbar'},
+							{name:'content'}
+						]
+					},
+					{
+						control:'MUI.Window',
+						id:'test',
+						title:'Test',
+						content:{
+							loadMethod: 'xhr',
+							url:'pages/lipsum.html'
+						}
+					}
+				]);
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="desktop" class="mui-desktop">
+</div>
+
+</body>
+</html>

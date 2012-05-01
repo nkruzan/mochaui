@@ -1,0 +1,185 @@
+/*
+ ---
+ file: toolbar.css
+
+ description: MUI - Toolbar css.
+
+ copyright: (c) 2011 Contributors in (/AUTHORS.txt).
+
+ license: MIT-style license in (/MIT-LICENSE.txt).
+
+ provides: css for default theme
+ ...
+ */
+
+/* Toolbar Dock */
+.mui-toolbardock {
+	padding: 0;
+}
+
+.mui-toolbardock div {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.mui-toolbardock div.mui-divider {
+/* Have to specify div here for IE6's sake */
+	background: url(../images/toolbar-divider.gif) repeat-y;
+	padding-left: 6px;
+	float: right;
+}
+
+.mui-toolbardock div.left {
+	float: left
+}
+
+.mui-toolbardock div.right {
+	float: right
+}
+
+.mui-toolbardock div.tabs ul {
+	padding-top: 0;
+}
+
+.mui-toolbardock div.tabs {
+	margin-top: 2px;
+}
+
+div.panel-header div.tabs {
+	margin: 0;
+	border-bottom: 1px solid #D3D3D3;
+}
+
+div.panel-header div.tabs ul {
+	height: 28px;
+	overflow: hidden
+}
+
+/* Toolbar */
+.mui-toolbar {
+	margin-top: 4px;
+	float: right;
+	overflow: hidden;
+	text-align: right;
+	height: 22px;
+	padding-bottom: 2px;
+	vertical-align: middle;
+}
+
+.mui-toolbar img.disabled {
+	cursor: default;
+}
+
+.mui-toolbar .button {
+	vertical-align: top;
+	margin-top: 0;
+	height: 23px;
+}
+
+.mui-toolbar span.imgButton .imgButton span img {
+	padding: 0 0 2px;
+	position: relative;
+	top: 6px;
+}
+
+.mui-toolbar span.mui-icon {
+	line-height: 24px;
+	font-size: 14px;
+	padding: 3px 9px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid transparent;
+}
+
+.mui-toolbar span.mui-icon:hover {
+	border: 1px solid #a0a0a0;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.mui-toolbar select.theme {
+	line-height: 24px;
+	margin: 3px 0 4px 0;
+}
+
+* html .mui-toolbar .searchField, * html .mui-toolbar .searchButton {
+/* IE6 Hack */
+	margin-top: -1px;
+}
+
+* html .mui-toolbar .button {
+/* IE6 Hack */
+	vertical-align: top;
+	margin-top: 0;
+	height: 25px;
+}
+
+.panel-footer div div.mui-toolbar {
+}
+
+/* spinner */
+.mui-spinnerWrapper {
+	width: 16px;
+	height: 16px;
+	background: url(../images/spinner-placeholder.gif) no-repeat;
+	margin: 4px 5px 0 5px;
+}
+
+.mui-spinner {
+	display: none;
+	background: url(../images/spinner.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.mui-toolbar .mui-spinnerWrapper {
+	margin: 4px 0 2px 0;
+	height: 24px;
+}
+
+.mui-toolbar .mui-spinnerWrapper .mui-spinner {
+	margin-left: -3px
+}
+
+.mui-spinnerOverlay {
+	top: 0;
+	left: 0;
+	background: white none repeat scroll 0% 0%;
+	-moz-background-clip: -moz-initial;
+	-moz-background-origin: -moz-initial;
+	-moz-background-inline-policy: -moz-initial;
+	position: absolute;
+	z-index: 999;
+	opacity: 0.5;
+	filter: alpha(opacity = 50)
+}
+
+/* search fields toolbar */
+.searchField {
+	width: 150px;
+	overflow: hidden;
+	line-height: 15px;
+	margin: 0;
+	padding: 4px 0 2px 5px;
+	border: 1px solid #808080;
+	border-right: 0;
+	vertical-align: middle;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-radius: 3px 0 0 3px;
+}
+
+.searchButton {
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-radius: 0 3px 3px 0;
+}
+
+.mui-panel-header .mui-tabs li a {
+	padding-bottom: 1px;
+}
+
+*:first-child + html .mui-toolbar .searchField, *:first-child + html .mui-toolbar .searchButton {
+/* IE7 Hack */
+	margin-top: -1px;
+}
